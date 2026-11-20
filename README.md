@@ -10,8 +10,19 @@ This PlatformIO project targets the `esp32doit-devkit-v1` and contains:
 For the full assembly plan, motor-driver and INA260 wiring, display notes,
 power precautions, and bring-up steps, see [HARDWARE_SETUP.md](./HARDWARE_SETUP.md).
 
-No obstacle, distance, wheel-encoder, or other sensor hardware is declared in
-the source, so no sensor pins or behavior are assumed.
+## Current prototype status
+
+The firmware builds for the ESP32 and provides open-loop, manual driving from
+the Wi-Fi browser page or USB serial. It also reports INA260 readings over
+serial and stops a drive command after one second without a refresh. It
+requires the INA260 to initialize before it will enable driving.
+
+This is enough software for a **basic manual-driving prototype**, provided the
+actual driver, motor, battery, and INA260 hardware are compatible and wired
+correctly. The firmware has only been build-tested, not validated on the
+physical rover. It has no encoders/PID speed control, obstacle sensors,
+autonomy, camera/vision, Raspberry Pi link, integrated screen, or
+safety-rated physical emergency stop.
 
 ## Planned future direction
 
@@ -21,10 +32,13 @@ Raspberry Pi integration. Those features are not implemented by this firmware;
 it provides local Wi-Fi browser control and supports the drive and
 battery-monitor functions described below.
 
-The MadHacks display is identified as the same 3.5-inch Raspberry Pi LCD, but
-its exact model/interface and a safe GPIO/power plan are not established here.
-Display wiring and code are deferred; no display pin assignments are made or
-changed by this Wi-Fi step.
+The R4 display connection is documented as a separate test setup in
+[HARDWARE_SETUP.md](./HARDWARE_SETUP.md); it is not integrated with the ESP32
+rover firmware yet.
+
+An original, adjustable starting chassis plate model is in [cad/](./cad/).
+Its default dimensions are placeholders, not measurements of the rover's
+components.
 
 ## Hardware assumptions — verify before wiring
 

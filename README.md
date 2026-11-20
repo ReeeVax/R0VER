@@ -7,6 +7,9 @@ This PlatformIO project targets the `esp32doit-devkit-v1` and contains:
 - A protected ESP32 Wi-Fi access point with a mobile browser drive page.
 - USB-serial drive control as a fallback and periodic battery telemetry.
 
+For the full assembly plan, motor-driver and INA260 wiring, display notes,
+power precautions, and bring-up steps, see [HARDWARE_SETUP.md](./HARDWARE_SETUP.md).
+
 No obstacle, distance, wheel-encoder, or other sensor hardware is declared in
 the source, so no sensor pins or behavior are assumed.
 

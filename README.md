@@ -14,11 +14,11 @@ uses USB serial instead and does not start a Wi-Fi access point or web server.
 
 ## Planned future direction
 
-The original project description envisions visual obstacle avoidance, a
-manipulator arm, multi-terrain capability, and Raspberry Pi wireless
-communication. Those features are not implemented by this firmware; the
-current hardware and code support the drive and battery-monitor functions
-described below.
+Inspired by robotic NASA rovers, the original project description envisions
+visual obstacle avoidance, a manipulator arm, multi-terrain capability, and
+Raspberry Pi wireless communication. Those features are not implemented by
+this firmware; the current hardware and code support the drive and
+battery-monitor functions described below.
 
 ## Hardware assumptions — verify before wiring
 
